@@ -69,5 +69,5 @@ melt_data = melt(Merged_data, id_labels, measure.vars=measure_labels)
 tidyset <- dcast(melt_data, subject + activity ~ variable, mean)
 
 # Write the tidy data set to a file
-write.csv(tidyset, row.names=FALSE, file="./UCI_HAR_tidy_data.txt")
+write.table(tidyset, row.names=FALSE, file="./UCI_HAR_tidy_data.txt")
 
